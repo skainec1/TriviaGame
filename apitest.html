@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <!-- TITLE -->
+    <title>Take A Hike</title>
+    
+    <!--STYLE-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <!--BOOTSTRAP-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!--JAVASCRIPT-->
+    <!-- <script type-="text/javascript" src="assets/javascript/app.js"></script> -->
+
+</head>
+<body>hello world</body>
+<script>
+     var longitudeAPIKey = "Stukr8nGoCSSLDp6J5k8KmMKdI2DRgcHoYPU7UhSGMzaN6duoDJBXC96GT09AWFo";
+var queryURLLongitude = "https://www.zipcodeapi.com/rest/"+ longitudeAPIKey+ "/info.json/"+ "44121" + "/degrees";
+   
+    var longitude;
+    var latitude;
+    $.ajax({
+        url: queryURLLongitude,
+        method: "GET"
+      }).then(function(response) {
+          console.log(response);
+        //   longitude = JSON.stringify(response);
+        //   latitude = response.
+          console.log("longitude: " + longitude);
+      })
+</script>
